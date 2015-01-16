@@ -1,0 +1,1 @@
+Zaabi was created to serve a need for the conscious foodie. The idea was simple: highlight and rate only the restaurants that cater to people observing dietary restrictions such as Halal, Kosher, Vegetarian, Vegan, Organic or Gluten-free. I built the prototype as a mobile web app using HTML5, CSS3 and jQuery.
