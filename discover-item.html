@@ -1,0 +1,114 @@
+<!doctype html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--><html class="no-js"><!--<![endif]-->
+	<head>
+		<title>Zaabi</title>
+		<link rel="stylesheet" href="stylesheets/screen.css" media="screen">
+		<script src="js/iscroll.js" type="text/javascript"></script>
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link rel="apple-touch-startup-image" href="images/splash-screen-320x460.png" />
+		<script type="text/javascript" src="js/modernizr-latest.js"></script>
+		<script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+		<script type="application/javascript" src="js/iscroll.js"></script>
+		<script type="text/javascript">
+			var myScroll;
+			function loaded() {
+				setTimeout(function () {
+					myScroll = new iScroll('wrapper', {
+						useTransform: false,
+						onBeforeScrollStart: function (e) {
+							var target = e.target;
+							while (target.nodeType != 1) target = target.parentNode;
+							
+							if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA')
+								e.preventDefault();
+						}
+					}
+					);
+				}, 100);
+			}
+			document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+			window.addEventListener('load', loaded, false);
+		</script>
+	</head>
+	<body>
+	
+	<div id="header-bar" class="logo">
+		<img src="images/zaabi-logo2.png" />
+		<a id="backButton" class="button" href="discover.html">Back</a>
+		<a id="shareButton" class="button" href="#"></a>
+	</div>
+	<div id="wrapper" class="page-discover-item">
+		<div id="scroller">
+			<div id="location-meta">
+				<h1>Kabab Paradise</h1>
+				<span class="meta-address">60 South Main Street, South Boundbrook, NJ</span>
+				<span class="meta-rating meta-love">Most people love this place</span>
+				<div class="taste-rate-button">Taste & Rate</div>
+			</div>
+			
+			<div id="content">
+				<h2>13 Reviews</h2>
+				<ul id="meta-content-reviews">
+					<li>
+						<a href="discover-item.html">
+        					<img src="images/sameer.png" align="left" />
+            				<span>Sameer S. says: Sed scelerisque lacus quis erat consequat quis sollicitudin...</span>
+        				</a>
+        			</li>
+        			<li>
+        				<a href="discover-item.html">
+        					<img src="images/saad.png" align="left" />
+           	 				<span>Saad M. says: Suspendisse mollis lacus et nisl malesuada in porta felis ornare...</span>
+        				</a>
+        			</li>
+        			<li>
+        				<a href="discover-item.html">
+           	 				<span>View All 13 Reviews</span>
+        				</a>
+        			</li>
+    			</ul>
+    			
+    			<h2>4 Photos</h2>
+				<ul id="meta-content-photos">
+					<li>
+						<a href="#"><img src="images/burger.png"></a>
+						<a href="#"><img src="images/platter.png"></a>
+						<a href="#"><img src="images/meal.png"></a>
+        			</li>
+    			</ul> 
+				
+				<h2>Top Rated Items</h2>
+				<ul id="meta-content-top-rated">
+					<li>Mixed Gyro Platter</li>
+        			<li>Neptune Burger</li>
+        			<li>Buffalo Fries</li>
+    			</ul>
+    			
+    			<!-- <div id="foursquare-button">Check In On<img src="images/foursquare-logo.png" /></div> -->
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<ul id="tab-bar" class="page-discover-item">
+			<li id = "tab-friends">
+				<a href="friends.html">Friends</a>
+			</li>
+			<li id="tab-search">
+				<a href="search.html">Search</a>
+			</li>
+			<li id="tab-discover">
+				<a href="discover.html">Discover</a>
+			</li>
+			<li id="tab-favs">
+				<a href="#">Favs</a>
+			</li>
+			<li id="tab-profile">
+				<a href="#">Profile</a>
+			</li>
+		</ul><!-- #tab-bar -->
+	</div>
+	</body>
+</html>

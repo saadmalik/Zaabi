@@ -1,0 +1,77 @@
+<!doctype html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--><html class="no-js"><!--<![endif]-->
+	<head>
+		<title>Zaabi</title>
+		<link rel="stylesheet" href="stylesheets/screen.css" media="screen">
+		<script src="js/iscroll.js" type="text/javascript"></script>
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link rel="apple-touch-startup-image" href="images/splash-screen-320x460.png" />
+		<script type="text/javascript" src="js/modernizr-latest.js"></script>
+		<script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+		<script type="application/javascript" src="js/iscroll.js"></script>
+		<script type="text/javascript">
+			var myScroll;
+			function loaded() {
+				setTimeout(function () {
+					myScroll = new iScroll('wrapper', {
+						useTransform: false,
+						onBeforeScrollStart: function (e) {
+							var target = e.target;
+							while (target.nodeType != 1) target = target.parentNode;
+							
+							if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA')
+								e.preventDefault();
+						}
+					}
+					);
+				}, 100);
+			}
+			document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+			window.addEventListener('load', loaded, false);
+		</script>
+	</head>
+	<body>
+	
+	<div id="header-bar">
+		<form method="get" action="/search" id="header-search">
+  			<input name="q" type="text" size="40" placeholder="Food, restaurant or location" />
+		</form></div>
+	<div id="wrapper" class="page-search">
+		<div id="scroller">
+			<h2>Find the best</h2>
+			<ul id="search-list" class="search-tbl-view search-tbl-action">
+				<a href="search.html"><li>gyro</li></a>
+				<a href="#"><li>biryani</li></a>
+				<a href="#"><li>cheesesteak</li></a>
+				<a href="#"><li>falafel</li></a>
+				<a href="#"><li>steak</li></a>
+				<a href="#"><li>burger</li></a>
+				<a href="#" class="last-list"><li>thai</li></a>
+				
+			</ul>
+		</div>
+	</div>
+	<div id="footer">
+		<ul id="tab-bar" class="page-search">
+			<li id = "tab-friends">
+				<a href="friends.html">Friends</a>
+			</li>
+			<li id="tab-search">
+				<a href="search.html">Search</a>
+			</li>
+			<li id="tab-discover">
+				<a href="discover.html">Discover</a>
+			</li>
+			<li id="tab-favs">
+				<a href="#">Favs</a>
+			</li>
+			<li id="tab-profile">
+				<a href="#">Profile</a>
+			</li>
+		</ul><!-- #tab-bar -->
+	</div>
+	</body>
+</html>
